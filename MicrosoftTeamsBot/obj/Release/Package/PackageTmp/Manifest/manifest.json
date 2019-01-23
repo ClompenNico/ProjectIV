@@ -1,0 +1,78 @@
+{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.0/manifest/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.3",
+  "version": "1.0.0",
+  "id": "00000000-0000-0000-0000-000000000000",
+  "packageName": "microsoft.teams.bot",
+  "developer": {
+    "name": "TeamsBot",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Microsoft Teams Bot",
+    "full": "Microsoft Teams Bot for work"
+  },
+  "description": {
+    "short": "Microsoft Teams Bot for the work environment",
+    "full": "Microsoft Bot for the work environment. You can extend this to add more content and capabilities."
+  },
+  "icons": {
+    "outline": "bot20x20.png",
+    "color": "bot96x96.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "microsoft.teams.bot.hellotab",
+      "name": "Microsoft Teams Bot",
+      "contentUrl": "https://yourteamsapp.ngrok.io/hello",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://yourteamsapp.ngrok.io/configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "00000000-0000-0000-0000-000000000000",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "scopes": [
+        "team",
+        "personal"
+      ]
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "00000000-0000-0000-0000-000000000000",
+      "commands": [
+        {
+          "id": "getRandomText",
+          "description": "Gets some random text and images that you can insert in messages for fun.",
+          "title": "Get some random text for fun",
+          "initialRun": true,
+          "parameters": [
+            {
+              "name": "cardTitle",
+              "description": "Card title to use",
+              "title": "Card title"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [],
+  "validDomains": []
+}
