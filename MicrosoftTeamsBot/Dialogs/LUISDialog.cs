@@ -2,7 +2,6 @@
 using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
-using MicrosoftTeamsBot.Data;
 using MicrosoftTeamsBot.Models;
 using MicrosoftTeamsBot.Repositories;
 using System;
@@ -133,14 +132,16 @@ namespace MicrosoftTeamsBot.Dialogs
             {
                 //First will call GreetingDialog, when that is done, Call Callback and wait for the next message to receive
                 await context.PostAsync(
-                    "Currently you can order a sandwich,    " +
-                    "\r\nAsk what your orders of today were    " +
-                    "\r\nAsk if you have received your vouchers    " +
-                    "\r\nAsk where to find the maintenance material    " +
-                    "\r\nAsk for a list of the company's numbers    " +
-                    "\r\nAsk for the company's opening hours    " +
-                    "\r\nAnd when the holidays are    " +
-                    "\r\nAsk what the wifi password is");
+                    "Currently you can:    " +
+                    "    " +
+                    "\r\nAsk me to order a sandwich    " +
+                    "\r\nWhat your orders of today were    " +
+                    "\r\nIf you have received your vouchers    " +
+                    "\r\nWhat the company's numbers are    " +
+                    "\r\nWhat are the company's opening hours    " +
+                    "\r\nWhen the holidays take place    " +
+                    "\r\nWhat the wifi password is    " +
+                    "\r\nWhere to find the (broom, towels, bleach, trashbags, sponges, handbrush, etc).");
                 context.Wait(MessageReceived);
             }
             else
@@ -365,64 +366,5 @@ namespace MicrosoftTeamsBot.Dialogs
             context.Wait(MessageReceived);
             return;
         }
-
-
-        #region OrderSandwich fail
-        //private async Task OrderSandwich(IDialogContext context, IAwaitable<Sandwich> result)
-        //{
-        //    var sandwich = result;
-        //    //context.UserData.SetValue<string>("Sandwich", sandwich);
-
-
-        //    await context.PostAsync("Sandwich ordered!");
-        //    context.Wait(MessageReceived);
-        //}
-        #endregion
-
-        #region BugreportExample
-        [LuisIntent("NewBugReportIntent")]
-        public async Task bugReport(IDialogContext context, LuisResult result)
-        {
-            if (result.TopScoringIntent.Score > 0.500)
-            {
-                //Usinig BotBuilder FORMFLOW => being able to start up the form flow!!!
-                //var enrollmentForm = new FormDialog<BugReport>(new BugReport(), this.NewBugReport, FormOptions.PromptInStart);
-                //context.Call<BugReport>(enrollmentForm, Callback);
-                await context.PostAsync("Not available anymore, sorry.");
-                context.Wait(MessageReceived);
-            }
-            else
-            {
-                await None(context, result);
-            }
-        }
-
-        [LuisIntent("QueryBugType")]
-        public async Task QueryBugTypes(IDialogContext context, LuisResult result)
-        {
-            //Voor een entity op te zoeken in het type "BugType"
-            foreach (var entity in result.Entities.Where(Entity => Entity.Type == "BugType"))
-            {
-                //Eerst lowercase alles
-                var value = entity.Entity.ToLower();
-                //De lijst enums vergelijken met de bugtypes dat we hebben!
-                if (Enum.GetNames(typeof(BugType)).Where(a => a.ToLower().Equals(value)).Count() > 0)
-                {
-                    await context.PostAsync("Yes that is a bug type!");
-                    context.Wait(MessageReceived);
-                    return;
-                }
-                else
-                {
-                    await context.PostAsync("I'm sorry that is not a bug type.");
-                    context.Wait(MessageReceived);
-                    return;
-                }
-            }
-            await context.PostAsync("I'm sorry that is not a bug type.");
-            context.Wait(MessageReceived);
-            return;
-        }
-        #endregion
     }
 }

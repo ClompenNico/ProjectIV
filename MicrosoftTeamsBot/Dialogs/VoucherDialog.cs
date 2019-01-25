@@ -1,6 +1,5 @@
 ﻿using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
-using MicrosoftTeamsBot.Data;
 using MicrosoftTeamsBot.Repositories;
 using System;
 using System.Collections.Generic;

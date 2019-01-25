@@ -444,32 +444,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
-    <Compile Include="Data\MicrosoftBotDbContext.cs" />
-    <Compile Include="Dialogs\Old\EchoBot.cs" />
     <Compile Include="Dialogs\GreetingDialog.cs" />
     <Compile Include="Dialogs\LUISDialog.cs" />
-    <Compile Include="Dialogs\Old\MainDialog.cs" />
-    <Compile Include="Dialogs\Old\Proactive.cs" />
     <Compile Include="Dialogs\NoneDialog.cs" />
-    <Compile Include="Dialogs\Old\RootDialog.cs" />
     <Compile Include="Dialogs\SandwichDialog.cs" />
     <Compile Include="Dialogs\VoucherDialog.cs" />
-    <Compile Include="Extensions\MessageExtension.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\FoodOrder.cs" />
-    <Compile Include="Models\Old\ApplicationUser.cs" />
     <Compile Include="Models\Sandwich.cs" />
-    <Compile Include="Models\Old\BugReport.cs" />
     <Compile Include="Models\TeamsChannel.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Models\Users_Orders.cs" />
     <Compile Include="Models\Vouchers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\IUsersRepo.cs" />
     <Compile Include="Repositories\MSTeamsBotDB.cs" />
-    <Compile Include="Repositories\UsersRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -489,7 +479,6 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Manifest\manifest.json" />
-    <Content Include="appsettings.json" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\MicrosoftTeamsBot - Web Deploy.pubxml" />
   </ItemGroup>

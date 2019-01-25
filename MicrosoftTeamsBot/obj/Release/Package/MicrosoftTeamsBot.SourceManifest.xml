@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\SOURCE\_ProjectIV\MicrosoftTeamsBot_TryOutDatabase\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" />
-  <setAcl path="C:\SOURCE\_ProjectIV\MicrosoftTeamsBot_TryOutDatabase\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
-  <setAcl path="C:\SOURCE\_ProjectIV\MicrosoftTeamsBot_TryOutDatabase\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\SOURCE\_ProjectIV\ProjectIV\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" />
+  <setAcl path="C:\SOURCE\_ProjectIV\ProjectIV\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="C:\SOURCE\_ProjectIV\ProjectIV\MicrosoftTeamsBot\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

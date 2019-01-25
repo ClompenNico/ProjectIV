@@ -48,69 +48,26 @@ namespace MicrosoftTeamsBot.Dialogs
 
         private async Task Respond(IDialogContext context)
         {
-            ////Get name, split it and keep first name
-            //string name = context.Activity.From.Name;
-            //string[] splitName = name.Split(null);
-            //name = splitName[0].ToString();
+            //Get name, split it and keep first name
+            string name = context.Activity.From.Name;
+            string[] splitName = name.Split(null);
+            name = splitName[0].ToString();
 
-            ////Capitalize first letter the name
-            //char[] a = name.ToCharArray();
-            //a[0] = char.ToUpper(a[0]);
-            //name = new string(a);
+            //Capitalize first letter the name
+            char[] a = name.ToCharArray();
+            a[0] = char.ToUpper(a[0]);
+            name = new string(a);
 
-            ////POST context.Activity.From.Id, context.Activity.From.Name, context.Activity.From.Role
-            //await context.PostAsync(String.Format($"How can I help you today {name}?"));
-            //context.Wait(MessageReceivedAsync);
-
-            #region TryOuts save
-            var userName = String.Empty;
-            context.UserData.TryGetValue<string>("Name", out userName);
-            if (string.IsNullOrEmpty(userName))
-            {
-                await context.PostAsync("What is your name?");
-                context.UserData.SetValue<bool>("GetName", true);
-            }
-            else
-            {
-                //POST context.Activity.From.Id, context.Activity.From.Name, context.Activity.From.Role
-                await context.PostAsync(String.Format($"How can I help you today {userName}?"));
-                context.Wait(MessageReceivedAsync);
-            }
-            #endregion
+            //POST context.Activity.From.Id, context.Activity.From.Name, context.Activity.From.Role
+            await context.PostAsync(String.Format($"You can type 'help' if something is unclear."));
+            context.Wait(MessageReceivedAsync);
         }
 
         //This method is gonna take care of the message received from the user
         public virtual async Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
-
-
-            //var message = await result;
-            //context.Done(message);
-
-            #region TryOut save
             var message = await result;
-            var userName = String.Empty;
-            var getName = false;
-
-            context.UserData.TryGetValue<string>("Name", out userName);
-            context.UserData.TryGetValue<bool>("GetName", out getName);
-
-            if (getName)
-            {
-                userName = message.Text;
-                context.UserData.SetValue<string>("Name", userName);
-                context.UserData.SetValue<bool>("GetName", false);
-                await Respond(context);
-                context.Wait(MessageReceivedAsync);
-            }
-            else
-            {
-                context.Done(message);
-            }
-            //MAYBE DO THIS IN THE MAINDIALOG THEN?
-            //Always waiting for the next message to receive!!
-            context.Wait(MessageReceivedAsync);
-            #endregion
+            context.Done(message);
         }
     }
 }

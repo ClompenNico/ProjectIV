@@ -90,7 +90,7 @@ namespace MicrosoftTeamsBot.Models
                 {
                     string UsersId = context.Activity.From.Id;
                     MSTeamsBotDB.SaveSandwich(UsersId, sandwich, context);
-                    await context.PostAsync("Sandwich ordered!");
+                    await context.PostAsync("Sandwich(es) ordered!");
                 })
                 .Build();
         }

@@ -13,7 +13,7 @@ namespace MicrosoftTeamsBot.Repositories
 {
     public static class MSTeamsBotDB
     {
-        private static readonly string CONNECTIONSTRING = "Server=tcp:mathiasnicoserver.database.windows.net,1433;Initial Catalog=MSTeamsBotDB;Persist Security Info=False;User ID=nico;Password=SThjv4596;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+        private static readonly string CONNECTIONSTRING = "Server=tcp:[SERVERNAME].database.windows.net,1433;Initial Catalog=[DATABASE];Persist Security Info=False;User ID=[ID/USERNAME];Password=[PASSWORD];MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
         [FunctionName("GetUserById")]
         public static Guid GetUserById(string id)
@@ -156,10 +156,10 @@ namespace MicrosoftTeamsBot.Repositories
 
                 var client = new SmtpClient("smtp.gmail.com", 587)
                 {
-                    Credentials = new NetworkCredential("msteamsbot@gmail.com", "MST3@MSB0T"),
+                    Credentials = new NetworkCredential("SEND_EMAIL_ADRES", "PASSWORD"),
                     EnableSsl = true
                 };
-                client.Send("msteamsbot@gmail.com", "nico.clompen@gmail.com", "order of the day.", message);
+                client.Send("SEND_EMAIL_ADRES", "RECEIVE_EMAIL_ADRES", "order of the day.", message);
 
                 using (SqlConnection connection = new SqlConnection(CONNECTIONSTRING))
                 {

@@ -1,0 +1,773 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "Microsoft Teams Bot Luis",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "CompanyNumbersIntent"
+    },
+    {
+      "name": "GreetingIntent"
+    },
+    {
+      "name": "HelpIntent"
+    },
+    {
+      "name": "HolidaysIntent"
+    },
+    {
+      "name": "MaintenanceMaterialIntent"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "OpeningHoursCompanyIntent"
+    },
+    {
+      "name": "OrderedSandwichIntent"
+    },
+    {
+      "name": "OrderSandwichIntent"
+    },
+    {
+      "name": "SwearingIntent"
+    },
+    {
+      "name": "ThankYouIntent"
+    },
+    {
+      "name": "VouchersIntent"
+    },
+    {
+      "name": "WifiPasswordIntent"
+    }
+  ],
+  "entities": [
+    {
+      "name": "BugType",
+      "roles": []
+    },
+    {
+      "name": "MaintenanceMaterial",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "are my meal vouchers deposited",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you check if my meal vouchers are deposited?",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you check whether my meal vouchers have been deposited?",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you get me a sandwich?",
+      "intent": "OrderSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "can you give me a list of everybody's number?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you give me a list of the company numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you give me a list of the company's numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you give me the company's numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you locate the broom for me",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 19,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "can you order me a sandwich?",
+      "intent": "OrderSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me my orders of today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me my sandwich orders of today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me the company's numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me the opening hours of the company?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me the opening hours?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me the wifi password?",
+      "intent": "WifiPasswordIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what holidays there are?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what sandwiches i ordered?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what the opening hours are of the company?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me what the wifi password is?",
+      "intent": "WifiPasswordIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me when the holidays are taking place?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "can you tell me when the holidays are?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "dick",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "did i order a sandwich today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know the companies opening hours?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know the company numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know what holidays there are?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know what the opening hours are of the company?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know what the openings hours are?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know what the wifi password is?",
+      "intent": "WifiPasswordIntent",
+      "entities": []
+    },
+    {
+      "text": "do you know when the holidays take place?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "fuck off",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "fuck you",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "god damn",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "have i ordered a sandwich today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "have i received my meal vouchers?",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "have i received my vouchers?",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "hello !",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "hello!",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "HelpIntent",
+      "entities": []
+    },
+    {
+      "text": "help me",
+      "intent": "HelpIntent",
+      "entities": []
+    },
+    {
+      "text": "hey",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "hi there",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "hi!",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "i don't understand",
+      "intent": "HelpIntent",
+      "entities": []
+    },
+    {
+      "text": "i want a sandwich",
+      "intent": "OrderSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "i would like a sandwich",
+      "intent": "OrderSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "i would like to order a sandwich",
+      "intent": "OrderSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "loser",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "meal vouchers",
+      "intent": "VouchersIntent",
+      "entities": []
+    },
+    {
+      "text": "motherfucker",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "please help",
+      "intent": "HelpIntent",
+      "entities": []
+    },
+    {
+      "text": "please tell me what the wifi password is?",
+      "intent": "WifiPasswordIntent",
+      "entities": []
+    },
+    {
+      "text": "stupid",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you for the order!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you so much",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you so much!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you very much",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you very much!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thank you!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thanks you very much!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thanks!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thx",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "thx!",
+      "intent": "ThankYouIntent",
+      "entities": []
+    },
+    {
+      "text": "twat",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the company numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the company opening hours",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the company's numbers?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the holidays?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the numbers within the company?",
+      "intent": "CompanyNumbersIntent",
+      "entities": []
+    },
+    {
+      "text": "what are the opening hours?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "what can you do",
+      "intent": "HelpIntent",
+      "entities": []
+    },
+    {
+      "text": "what have i ordered today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "what is the wifi password?",
+      "intent": "WifiPasswordIntent",
+      "entities": []
+    },
+    {
+      "text": "what sandwich have i ordered already?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "what was my sandwich order of today?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "what was my sandwich order?",
+      "intent": "OrderedSandwichIntent",
+      "entities": []
+    },
+    {
+      "text": "whats up",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "when are my holidays?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "when are the holidays?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "when can i take a holiday?",
+      "intent": "HolidaysIntent",
+      "entities": []
+    },
+    {
+      "text": "when does the company open?",
+      "intent": "OpeningHoursCompanyIntent",
+      "entities": []
+    },
+    {
+      "text": "where can i find the bleach",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 21,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "where can i find the maintenance?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 21,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where can i find the maintenancematerial",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 21,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "where can i usually find bleach",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 25,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "where can i usually find the maintenance?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 29,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "where can i usually find the maintenancematerial",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 29,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "where do i find the bleach",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "where do i find the maintenance?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 20,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "where do i find the maintenancematerial",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 20,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "where do i find the maintenancematerial?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 20,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "where do i search for the bleach",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 26,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where do i search for the maintenance?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 26,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "where do i search for the maintenancematerial",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 26,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "where is the bleach",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "where is the broom located",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "where is the maintenance located?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "where is the maintenancematerial",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where is the maintenancematerial located",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where is the maintenancematerial?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 13,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where is usually the maintenance located?",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 21,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "where is usually the maintenancematerial located",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 21,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "where's the broom located",
+      "intent": "MaintenanceMaterialIntent",
+      "entities": [
+        {
+          "entity": "MaintenanceMaterial",
+          "startPos": 12,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "yo",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "yo whats up my dude",
+      "intent": "GreetingIntent",
+      "entities": []
+    },
+    {
+      "text": "you stupid",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "you suck",
+      "intent": "SwearingIntent",
+      "entities": []
+    },
+    {
+      "text": "you twat",
+      "intent": "SwearingIntent",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

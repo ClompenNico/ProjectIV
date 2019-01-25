@@ -3,9 +3,7 @@ using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Connector.Teams;
 using Microsoft.Bot.Connector.Teams.Models;
-using MicrosoftTeamsBot.Data;
 using MicrosoftTeamsBot.Dialogs;
-using MicrosoftTeamsBot.Extensions;
 using MicrosoftTeamsBot.Models;
 using MicrosoftTeamsBot.Repositories;
 using System;
@@ -22,13 +20,6 @@ namespace MicrosoftTeamsBot.Controllers
     [BotAuthentication]
     public class MessagesController : ApiController
     {
-
-        //private static IUsersRepo _userRepo;
-        //public MessagesController(IUsersRepo usersRepo)
-        //{
-        //    _userRepo = usersRepo;
-        //}
-
         [HttpPost]
         public async Task<HttpResponseMessage> Post([FromBody] Activity activity)
         {
@@ -43,15 +34,7 @@ namespace MicrosoftTeamsBot.Controllers
                 catch { }
                 
                 //Full inbound message in JSON (ACTIVITY)
-                if (activity.IsComposeExtensionQuery())
-                {
-                    var response = MessageExtension.HandleMessageExtensionQuery(connector, activity);
-
-                    return response != null
-                        ? Request.CreateResponse<ComposeExtensionResponse>(response)
-                        : new HttpResponseMessage(HttpStatusCode.OK);
-                }
-                else if (activity.Type == ActivityTypes.Message)
+                if (activity.Type == ActivityTypes.Message)
                 {
 
                     try
